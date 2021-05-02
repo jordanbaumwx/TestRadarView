@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,9 @@
 		BF5D506E263F47D300F455CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5D506D263F47D300F455CC /* ContentView.swift */; };
 		BF5D5070263F47D400F455CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5D506F263F47D400F455CC /* Assets.xcassets */; };
 		BF5D5073263F47D400F455CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5D5072263F47D400F455CC /* Preview Assets.xcassets */; };
+		BF5D507B263F47EA00F455CC /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5D507A263F47EA00F455CC /* RadarView.swift */; };
+		BF5D507D263F483C00F455CC /* RadarOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5D507C263F483C00F455CC /* RadarOverlay.swift */; };
+		BF5D5080263F493200F455CC /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = BF5D507F263F493200F455CC /* SwiftSoup */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,8 @@
 		BF5D506F263F47D400F455CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF5D5072263F47D400F455CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF5D5074263F47D400F455CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF5D507A263F47EA00F455CC /* RadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarView.swift; sourceTree = "<group>"; };
+		BF5D507C263F483C00F455CC /* RadarOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarOverlay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5D5080263F493200F455CC /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +60,8 @@
 			children = (
 				BF5D506B263F47D300F455CC /* RadarMapApp.swift */,
 				BF5D506D263F47D300F455CC /* ContentView.swift */,
+				BF5D507A263F47EA00F455CC /* RadarView.swift */,
+				BF5D507C263F483C00F455CC /* RadarOverlay.swift */,
 				BF5D506F263F47D400F455CC /* Assets.xcassets */,
 				BF5D5074263F47D400F455CC /* Info.plist */,
 				BF5D5071263F47D400F455CC /* Preview Content */,
@@ -85,6 +93,9 @@
 			dependencies = (
 			);
 			name = RadarMap;
+			packageProductDependencies = (
+				BF5D507F263F493200F455CC /* SwiftSoup */,
+			);
 			productName = RadarMap;
 			productReference = BF5D5068263F47D300F455CC /* RadarMap.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +123,9 @@
 				Base,
 			);
 			mainGroup = BF5D505F263F47D300F455CC;
+			packageReferences = (
+				BF5D507E263F493200F455CC /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = BF5D5069263F47D300F455CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +153,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF5D506E263F47D300F455CC /* ContentView.swift in Sources */,
+				BF5D507D263F483C00F455CC /* RadarOverlay.swift in Sources */,
+				BF5D507B263F47EA00F455CC /* RadarView.swift in Sources */,
 				BF5D506C263F47D300F455CC /* RadarMapApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +344,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BF5D507E263F493200F455CC /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BF5D507F263F493200F455CC /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF5D507E263F493200F455CC /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BF5D5060263F47D300F455CC /* Project object */;
 }
